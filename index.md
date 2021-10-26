@@ -5,7 +5,12 @@ layout: default
 ## Introduction
 
 My name is Kasper Sundström and this is my homepage for the purposes of Uni Helsinki course Command-Line
-Tools for Linguists 2021. Welcome!
+Tools for Linguists 2021.
+
+I am an undergraduate student at Uni Helsinki, majoring in general linguistics, phonetics and language technology,
+and minoring in Nordic languages.
+
+Welcome!
 
 ## Find me on
 
@@ -15,7 +20,7 @@ Tools for Linguists 2021. Welcome!
 
 ## Contact
 
-* My university e-mail is firstname.lastname@helsinki.fi.
+* My academic e-mail is firstname.lastname@helsinki.fi.
 * My business e-mail is firstname@ksundstrom.fi.
 
 ## Courses I've taken
@@ -39,3 +44,7 @@ Tools for Linguists 2021. Welcome!
 * [FYS4013 _Universum nu_ (3 cr)](https://sisu.helsinki.fi/student/courseunit/hy-CU-118399854-2020-08-01), spring 2021
 
 ## Projects
+
+## Misc.
+
+I enjoy singing and am a member of the Academic Male Voice Choir of Helsinki as well as Spira Ensemble.
