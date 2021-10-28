@@ -53,6 +53,7 @@ The source code is available on GitHub.
 
 * [GitHub](https://github.com/KSundstrom/fmaksundstrom-homepage)
 * [Homepage](https://ksundstrom.fi/)
+* (I am particularly proud of the custom [error pages](https://ksundstrom.fi/foo).)
 
 ### KoalaOnline
 
@@ -73,5 +74,7 @@ The source code is available on GitHub.
 
 ## Misc.
 
-I enjoy singing and am a member of the [Academic Male Voice Choir of Helsinki](https://www.akademen.com/) and
-[Spira Ensemble](https://spiraensemble.fi/).
+I enjoy singing and am a member of the [**Academic Male Voice Choir of Helsinki**](https://www.akademen.com/) and
+[**Spira Ensemble**](https://spiraensemble.fi/).
+
+I have also been active in student nation **Åbo Nation**.
