@@ -45,6 +45,33 @@ Welcome!
 
 ## Projects
 
+### K. Sundström homepage
+
+For my private business, Fma K. Sundström, I have created a simple homepage, employing the Bootstrap framework.
+The page is written in polyglot XHTML5 + SVG + RDFa + ARIA, CSS, JavaScript, and PHP.
+The source code is available on GitHub.
+
+* [GitHub](https://github.com/KSundstrom/fmaksundstrom-homepage)
+* [Homepage](https://ksundstrom.fi/)
+
+### KoalaOnline
+
+For my choir, the Academic Male Voice Choir of Helsinki, I have created a song-lottery web application,
+for use in exams where a singer is to perform a certain number of random songs in certain categories.
+The application employs jQuery Core and the Bootstrap framwork, and is written in polyglot XHTML5 +
+SVG + RDFa + ARIA, XML + XSD, CSS3, JavaScript, and PHP. The source code is available on GitHub.
+
+* [GitHub](https://github.com/KSundstrom/koala-online)
+* [Website](https://koala.ksundstrom.fi/)
+
+### JKoala
+
+The KoalaOnline web application was originally based on an earlier local Java application.
+The source code is available on GitHub.
+
+* [GitHub](https://github.com/KSundstrom/j-koala)
+
 ## Misc.
 
-I enjoy singing and am a member of the Academic Male Voice Choir of Helsinki as well as Spira Ensemble.
+I enjoy singing and am a member of the [Academic Male Voice Choir of Helsinki](https://www.akademen.com/) and
+[Spira Ensemble](https://spiraensemble.fi/).
