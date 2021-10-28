@@ -4,7 +4,7 @@ layout: default
 
 ## Command Line Tools for Linguists
 
-The course KIK-LG221 _Command Line Tools for Linguists_ at Uni Helsinki is a regular intermediate-level course comprising 5 credits.
+The course KIK-LG221 _Command Line Tools for Linguists_ at Uni Helsinki is a regular intermediate-level undergraduate course comprising 5 credits.
 
 ### Week 1
 

@@ -1,5 +1,3 @@
-## Customizing
-
 ### Configuration variables
 
 Minimal will respect the following variables, if set in your site's `_config.yml`:
