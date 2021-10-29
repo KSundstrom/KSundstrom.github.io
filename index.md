@@ -4,10 +4,10 @@ layout: default
 
 ## Introduction
 
-My name is Kasper Sundström and this is my homepage for the purposes of Uni Helsinki courses.
+My name is **Kasper Sundström** and this is my homepage for the purposes of university courses.
 
-I am an undergraduate student at Uni Helsinki, majoring in general linguistics, phonetics and language technology,
-and minoring in Nordic languages (Swedish as first language).
+I am an undergraduate student at the **University of Helsinki**, majoring in general linguistics, phonetics and
+language technology, and minoring in Nordic languages, with Swedish as first language.
 
 I have my own private business, **K. Sundström**, which offers various language-related services, such as translation,
 copywriting, copyediting, proofreading, layout, prepress, web design, as well as consulting and training.
@@ -16,7 +16,7 @@ I have previously studied commercial law, accounting, and informatics at undergr
 of banking and in the world of non-profit organizations, e.g. as secretary-general of [SSBS sr](https://www.ssbs.fi/)
 and [SSI rf](https://stbl.fi/ssi/), publisher of _Studentbladet_.
 
-If you have question, please do not hesitate to get in touch! Welcome to my homepage!
+If you have any questions, please do not hesitate to get in touch. Welcome to my homepage!
 
 ## Find me on
 
@@ -72,7 +72,7 @@ If you have question, please do not hesitate to get in touch! Welcome to my home
 ### Fma K. Sundström homepage
 
 For my private business, Fma K. Sundström, I have created a simple homepage, employing the Bootstrap front-end framework.
-The page is written in polyglot XHTML5 + SVG + RDFa + ARIA + CSS3 + JS and PHP.
+The page is written in polyglot XHTML5 + SVG + RDFa + ARIA, CSS3, JS, and PHP.
 The source code is available on GitHub.
 
 * [GitHub](https://github.com/KSundstrom/fmaksundstrom-homepage)
@@ -87,7 +87,7 @@ The name _Koala_ is an abbreviation of _Kind-of-a-Lottery App_.
 The application employs jQuery Core for functionality, XML and XSD for storing the song information,
 and Bootstrap as the front-end framework.
 An earlier version used TXT files rather than XML.
-Otherwise the application is written in polyglot XHTML5 + SVG + RDFa + ARIA + CSS3 + JS and PHP.
+Otherwise the application is written in polyglot XHTML5 + SVG + RDFa + ARIA, CSS3, JS, and PHP.
 The source code is available on GitHub.
 
 * [GitHub](https://github.com/KSundstrom/koala-online)
@@ -123,4 +123,4 @@ I also enjoy typesetting in LaTeX, using MikTeX locally and Overleaf online for 
 I enjoy singing and am a member of the [Academic Male Voice Choir of Helsinki](https://www.akademen.com/) and
 [Spira Ensemble](https://spiraensemble.fi/).
 
-I have also been active in student nation Åbo Nation.
+I have also been quite active in student nation Åbo Nation.
