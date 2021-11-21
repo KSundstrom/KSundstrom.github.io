@@ -2,6 +2,8 @@
 layout: default
 ---
 
+# Home
+
 ## Introduction
 
 My name is **Kasper Sundström** and this is my homepage for the purposes of university courses.
