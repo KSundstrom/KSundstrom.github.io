@@ -66,6 +66,7 @@ If you have any questions, please do not hesitate to get in touch. Welcome to my
 * [KOK-N102 _Rhetoric_ (5cr)](https://studies.helsinki.fi/courses/cu/hy-CU-118310760-2020-08-01)
 * [KOK-N103 _Grammar I_ (5cr)](https://studies.helsinki.fi/courses/cu/hy-CU-118310861-2020-08-01)
 * [NOR-S371 _Iceland and Icelandic_ (5cr)](https://studies.helsinki.fi/courses/cu/hy-CU-117947352-2020-08-01)
+* [TKT21018 _Elements of AI: Introduction to AI_ (2cr)](https://studies.helsinki.fi/courses/cu/hy-CU-124047974-2020-08-01)
 
 ## Projects
 
@@ -124,3 +125,5 @@ I enjoy singing and am a member of the [Academic Male Voice Choir of Helsinki](h
 [Spira Ensemble](https://spiraensemble.fi/).
 
 I have also been quite active in student nation Åbo Nation.
+
+Whenever I find the time, I try to expand on my family tree in genealogy software Gramps.
