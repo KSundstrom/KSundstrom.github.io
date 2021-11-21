@@ -18,6 +18,10 @@ and [SSI rf](https://stbl.fi/ssi/), publisher of _Studentbladet_.
 
 If you have any questions, please do not hesitate to get in touch. Welcome to my homepage!
 
+## CV
+
+Please have a look at [my CV over on Overleaf](https://www.overleaf.com/read/kpygmkzhtpdv).
+
 ## Find me on
 
 * [GitHub](https://github.com/KSundstrom)
