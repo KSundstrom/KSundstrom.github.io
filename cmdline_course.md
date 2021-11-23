@@ -13,34 +13,131 @@ files and different character encodings with the command line, handling text cor
 running and installing applications from the command line, writing basic scripts, working with remote servers,
 and using version-control tools.
 
-## Week 1
+## Week 1: Introduction to Command-Line Environments
 
-Introduction to Command-Line Environments
+This week we had a live lecture on how computers work, and learnt about Linux and Unix, about setting up a command-line environment, some basic commands, how to quit applications, about command-line text editors, and about file formats and sizes.
 
-## Week 2
+I use Windows on my laptop, so in order to get a Unixlike command line up and running, I chose to install Windows Subsystem for Linux, and to try a few different distros for it, among these Debian, Ubuntu, Kali Linux, openSUSE, and Alpine. In the end, I settled for Debian, and have used it as my primary command-line environment ever since. During the course, I upgraded from Windows 10 to Windows 11, and from WSL1 to WSL2. I also learnt how to upgrade my Debian distro, and am now running Debian 12 Bookworm.
 
-Navigating a UNIX System
+Among the basic shell commands we learnt this first week were:
 
-## Week 3
+Command  | Usage
+---      | ---
+`ls`     | Lists the contents of the currect directory
+`pwd`    | Prints the currect working directory
+`whoami` | Prints the current user
+`mv`     | Moves (or renames) a file
+`cat`    | Concatenates files
+`less`   | Displays file contents
+`cp`     | Copies a file
+`rm`     | Removes a file
+`mkdir`  | Creates a new directory
+`cd`     | Changes the current directory
 
-Basic Corpus Processing
+We also learnt how to fetch contents from the internet using `wget`, and how to open and edit text files with the text editor Emacs.
 
-## Week 4
+We also learnt various keys and key combinations for quitting applications, for example:
 
-Advanced Corpus Processing
+* q
+* Esc
+* Ctrl-c
+* Ctrl-d
+* Ctrl-x Ctrl-c
 
-## Week 5
+## Week 2: Navigating a UNIX System
 
-Scripting and Configuration Files
+This week we will learn more about the UNIX system. We'll see how to copy, move and remove directories. We'll also learn about the standard system directories which are always present in a UNIX system and what they contain. Additionally, we'll learn how the UNIX system protects the privacy of the users. This is done via permissions which determine the files and directories each user can access.
 
-## Week 6
+In the second part of this week, we'll learn about processes and process management. Every time you execute a command like ls or a program like emacs, the command line interpreter starts a new process which is an instance of the program. There are dozens of processes running simultaneously on your system. We will learn how to control processes from the command line.
 
-Installing and Running Programs
+The third part of this week deals with working on a remote server using the programs ssh and scp. You will need access to the CSC taito or puhti server for this part. Most of you will have access to CSC servers if you took the Introduction to Language Technology course in Period I. If you don't have access to CSC servers yet, follow Step 1 (Register as CSC's Customer) in these instructions. Then email your CSC username to Hande (hande.celikkanat@helsinki.fi) who can get you access to CSC servers.
 
-## Week 7
+It so happens, that the original developer of the ssh program Tatu Ylönen is currently doing a PhD at our department. We interviewed him about his background, the UNIX/Linux operating system and the origin of the ssh program. Please have a look above!
 
-Version Control
+The UNIX file system
 
-## Week 8/Final Assignment
+In these videos, we will have a deeper look at the UNIX file system. We'll first learn about copying, moving and renaming directories which differs a bit from performing these operations on files. Then we'll take a look at the standard directories which are always present in a UNIX system and see what they contain.
+
+Commands introduced in this video:
+cp -R, rm -R, rmdir
+
+Commands introduced in this video:
+which
+
+Handling files and directories
+
+This is going to be some repetition from last week and some new contents on how to copy, move and delete files and directories. This tutorial uses the option "-F" for the ls command. It makes ls indicate whether the items are regular files or directories by appending a slash at end of he directory name. You can try it out if you like.
+
+The file system
+
+Read more about the UNIX system and absolute and relative paths in the following tutorial.
+
+Users, groups and file permissions
+
+There can be several users on a single UNIX computer. File permissions are a system for controlling which files users can access and also controlling the way that they can access the files.  Each file has an owner and the owner can decide what kind of access she grants to other users.
+
+The ls command
+
+The ls command can do more than just list the contents of a directory. It can also give you a whole lot of useful information about files and directories.
+
+Reducing the size of a file/directory by compressing it
+
+Read about compressing and decompressing files and directories using the command gzip and tar.
+
+Processes
+
+Each time we run a command on the command line, or execute a program, a new process is started in our operating system. The following video talks about the basics of processes, and process management in the command line.
+
+Commands introduced in this video:
+top, &, fg, CTRL+Z, ps, kill
+
+Processes Basics:
+
+The following tutorials give some basic idea about what processes are.
+
+Remote servers
+
+It is becoming more and more common to work on remote servers which provide us much better computational resources (ie. GPUs) and memory space than our personal computers can hope to match. In this video, we will see the basics of how we can connect and work on such a remote server, as well as how we can transfer files to and from such a server.
+
+Commands introduced in this video:
+ssh, scp
+
+We use the ssh command for connecting to remote servers, and scp for copying files to/from servers.
+
+If you have questions about how to set up the .ssh/config file, you can find more information here
+
+Some useful scp tips: (eg. How to send/receive multiple files at once, How to send/receive all files of a certain type, etc)
+
+At the end of this week, please make sure:
+* You are able to copy, move and delete a directory.
+* You have visited the root directory of your system. 
+* You know how to compress a file and a directory using gzip and tar.
+* You know how to find out and change the read and write permissions for a file.
+* You can find the PID of a process and kill it.
+* You're able to run commands in the background.
+* You know how to form a remote connection to a server.
+* You can to copy files to and from a server using scp.
+
+## Week 3: Basic Corpus Processing
+
+Lorem ipsum
+
+## Week 4: Advanced Corpus Processing
+
+Lorem ipsum
+
+## Week 5: Scripting and Configuration Files
+
+Lorem ipsum
+
+## Week 6: Installing and Running Programs
+
+Lorem ipsum
+
+## Week 7: Version Control
+
+Lorem ipsum
+
+## Final Assignment: Building Webpages using GitHub Pages
 
 Jekyll and GitHub Pages
