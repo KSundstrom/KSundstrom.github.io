@@ -74,42 +74,22 @@ We also learnt various keys and key combinations for quitting applications, for 
 
 ## Week 2: Navigating a UNIX System
 
-This week we will learn more about the UNIX system. We'll see how to copy, move and remove directories.
-We'll also learn about the standard system directories which are always present in a UNIX system and what
-they contain. Additionally, we'll learn how the UNIX system protects the privacy of the users. This is done
-via permissions which determine the files and directories each user can access.
+This week we watched an interview with Tatu Ylönen, the creator of `ssh` and PhD candidate at Uni Helsinki, and
+learnt more about Unixlike systems. In particular, we learnt how to copy, move and remove directories, about
+the standard system directories in a Unixlike system, and about permissions and privacy in Unixlike systems.
+Furthermore, we learnt about processes and the management of processes, and how to control processes from the
+command line. Finally, we learnt how to work with remote servers using `ssh` and and the related `scp`, working
+with the CSC server Puhti.
 
-In the second part of this week, we'll learn about processes and process management. Every time you execute
-a command like ls or a program like emacs, the command line interpreter starts a new process which is an
-instance of the program. There are dozens of processes running simultaneously on your system. We will learn
-how to control processes from the command line.
-
-The third part of this week deals with working on a remote server using the programs ssh and scp. You will
-need access to the CSC taito or puhti server for this part. Most of you will have access to CSC servers if
-you took the Introduction to Language Technology course in Period I. If you don't have access to CSC servers
-yet, follow Step 1 (Register as CSC's Customer) in these instructions. Then email your CSC username to Hande
-(hande.celikkanat@helsinki.fi) who can get you access to CSC servers.
-
-It so happens, that the original developer of the ssh program Tatu Ylönen is currently doing a PhD at our
-department. We interviewed him about his background, the UNIX/Linux operating system and the origin of the
-ssh program. Please have a look above!
-
-The UNIX file system
-
-In these videos, we will have a deeper look at the UNIX file system. We'll first learn about copying, moving
-and renaming directories which differs a bit from performing these operations on files. Then we'll take a
-look at the standard directories which are always present in a UNIX system and see what they contain.
-
-cp -R, rm -R, rmdir
+cp -R
+rm -R
+rmdir
 which
-
-Handling files and directories
+ls
 
 This is going to be some repetition from last week and some new contents on how to copy, move and delete files
 and directories. This tutorial uses the option "-F" for the ls command. It makes ls indicate whether the items
 are regular files or directories by appending a slash at end of he directory name. You can try it out if you like.
-
-The file system
 
 Users, groups and file permissions
 
@@ -117,26 +97,15 @@ There can be several users on a single UNIX computer. File permissions are a sys
 files users can access and also controlling the way that they can access the files. Each file has an owner
 and the owner can decide what kind of access she grants to other users.
 
-The ls command
-
-The ls command can do more than just list the contents of a directory. It can also give you a whole lot of
-useful information about files and directories.
-
 Reducing the size of a file/directory by compressing it
 
 Read about compressing and decompressing files and directories using the command gzip and tar.
-
-Processes
 
 Each time we run a command on the command line, or execute a program, a new process is started in our
 operating system. The following video talks about the basics of processes, and process management in the
 command line.
 
 top, &, fg, CTRL+Z, ps, kill
-
-Processes Basics
-
-Remote servers
 
 It is becoming more and more common to work on remote servers which provide us much better computational
 resources (ie. GPUs) and memory space than our personal computers can hope to match. In this video, we will
