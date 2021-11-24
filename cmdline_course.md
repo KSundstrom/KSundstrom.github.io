@@ -15,70 +15,112 @@ and using version-control tools.
 
 ## Week 1: Introduction to Command-Line Environments
 
-This week we had a live lecture on how computers work, and learnt about Linux and Unix, about setting up a command-line environment, some basic commands, how to quit applications, about command-line text editors, and about file formats and sizes.
+This week we had a live lecture on how computers work, and learnt about Linux and Unix, about setting up a
+command-line environment, some basic Bash commands, how to quit applications, about command-line text editors,
+and about file formats and sizes.
 
-I use Windows on my laptop, so in order to get a Unixlike command line up and running, I chose to install Windows Subsystem for Linux, and to try a few different distros for it, among these Debian, Ubuntu, Kali Linux, openSUSE, and Alpine. In the end, I settled for Debian, and have used it as my primary command-line environment ever since. During the course, I upgraded from Windows 10 to Windows 11, and from WSL1 to WSL2. I also learnt how to upgrade my Debian distro, and am now running Debian 12 Bookworm.
+I use Windows on my laptop, so in order to get a Unixlike command line up and running, I chose to install
+Windows Subsystem for Linux, and to try a few different distros for it, among these Debian, Ubuntu, Kali Linux,
+openSUSE, and Alpine. In the end, I settled for Debian, and have used it as my primary command-line environment
+ever since. During the course, I upgraded from Windows 10 to Windows 11, and from WSL1 to WSL2. I also learnt how
+to upgrade my Debian distro, and am now running Debian 12 Bookworm.
+
+Here is Debian’s well-known swirl logo:
+
+![Debian’s Open Use Logo](https://www.debian.org/logos/openlogo-nd-100.png "Debian’s Open Use Logo")
 
 Among the basic shell commands we learnt this first week were:
 
-Command  | Usage
----      | ---
-`ls`     | Lists the contents of the currect directory
-`pwd`    | Prints the currect working directory
-`whoami` | Prints the current user
-`mv`     | Moves (or renames) a file
-`cat`    | Concatenates files
-`less`   | Displays file contents
-`cp`     | Copies a file
-`rm`     | Removes a file
-`mkdir`  | Creates a new directory
-`cd`     | Changes the current directory
+**Command** | **Usage**
+:---        | :---
+`ls`        | Lists the contents of the currect directory
+`pwd`       | Prints the currect working directory
+`whoami`    | Prints the current user
+`mv`        | Moves (or renames) a file
+`cat`       | Concatenates files
+`less`      | Displays file contents
+`cp`        | Copies a file
+`rm`        | Removes a file
+`mkdir`     | Creates a new directory
+`cd`        | Changes the current directory
 
-We also learnt how to fetch contents from the internet using `wget`, and how to open and edit text files with the text editor Emacs.
+For example, if we, in Bash, would want to create a new directory named ‘foo’, move into it, confirm where we are
+in the directory tree (i.e. print our current working directory), then move back up in the directory tree, and
+finally confirm who we are (i.e. print the current user), our terminal would look like this:
+
+```bash
+~$ mkdir foo
+~$ cd foo
+~/foo$ pwd
+/home/user/foo
+~/foo$ cd ..
+~$ whoami
+user
+```
+
+We also learnt how to fetch contents from the internet using `wget`, and how to open and edit text files with the
+text editor `emacs`.
 
 We also learnt various keys and key combinations for quitting applications, for example:
 
-* q
-* Esc
-* Ctrl-c
-* Ctrl-d
-* Ctrl-x Ctrl-c
+* Single keys:
+  * q
+  * Esc
+* Key combinations:
+  * Ctrl-c
+  * Ctrl-d
+* Multiple key combinations:
+  * Ctrl-x Ctrl-c
 
 ## Week 2: Navigating a UNIX System
 
-This week we will learn more about the UNIX system. We'll see how to copy, move and remove directories. We'll also learn about the standard system directories which are always present in a UNIX system and what they contain. Additionally, we'll learn how the UNIX system protects the privacy of the users. This is done via permissions which determine the files and directories each user can access.
+This week we will learn more about the UNIX system. We'll see how to copy, move and remove directories.
+We'll also learn about the standard system directories which are always present in a UNIX system and what
+they contain. Additionally, we'll learn how the UNIX system protects the privacy of the users. This is done
+via permissions which determine the files and directories each user can access.
 
-In the second part of this week, we'll learn about processes and process management. Every time you execute a command like ls or a program like emacs, the command line interpreter starts a new process which is an instance of the program. There are dozens of processes running simultaneously on your system. We will learn how to control processes from the command line.
+In the second part of this week, we'll learn about processes and process management. Every time you execute
+a command like ls or a program like emacs, the command line interpreter starts a new process which is an
+instance of the program. There are dozens of processes running simultaneously on your system. We will learn
+how to control processes from the command line.
 
-The third part of this week deals with working on a remote server using the programs ssh and scp. You will need access to the CSC taito or puhti server for this part. Most of you will have access to CSC servers if you took the Introduction to Language Technology course in Period I. If you don't have access to CSC servers yet, follow Step 1 (Register as CSC's Customer) in these instructions. Then email your CSC username to Hande (hande.celikkanat@helsinki.fi) who can get you access to CSC servers.
+The third part of this week deals with working on a remote server using the programs ssh and scp. You will
+need access to the CSC taito or puhti server for this part. Most of you will have access to CSC servers if
+you took the Introduction to Language Technology course in Period I. If you don't have access to CSC servers
+yet, follow Step 1 (Register as CSC's Customer) in these instructions. Then email your CSC username to Hande
+(hande.celikkanat@helsinki.fi) who can get you access to CSC servers.
 
-It so happens, that the original developer of the ssh program Tatu Ylönen is currently doing a PhD at our department. We interviewed him about his background, the UNIX/Linux operating system and the origin of the ssh program. Please have a look above!
+It so happens, that the original developer of the ssh program Tatu Ylönen is currently doing a PhD at our
+department. We interviewed him about his background, the UNIX/Linux operating system and the origin of the
+ssh program. Please have a look above!
 
 The UNIX file system
 
-In these videos, we will have a deeper look at the UNIX file system. We'll first learn about copying, moving and renaming directories which differs a bit from performing these operations on files. Then we'll take a look at the standard directories which are always present in a UNIX system and see what they contain.
+In these videos, we will have a deeper look at the UNIX file system. We'll first learn about copying, moving
+and renaming directories which differs a bit from performing these operations on files. Then we'll take a
+look at the standard directories which are always present in a UNIX system and see what they contain.
 
-Commands introduced in this video:
 cp -R, rm -R, rmdir
-
-Commands introduced in this video:
 which
 
 Handling files and directories
 
-This is going to be some repetition from last week and some new contents on how to copy, move and delete files and directories. This tutorial uses the option "-F" for the ls command. It makes ls indicate whether the items are regular files or directories by appending a slash at end of he directory name. You can try it out if you like.
+This is going to be some repetition from last week and some new contents on how to copy, move and delete files
+and directories. This tutorial uses the option "-F" for the ls command. It makes ls indicate whether the items
+are regular files or directories by appending a slash at end of he directory name. You can try it out if you like.
 
 The file system
 
-Read more about the UNIX system and absolute and relative paths in the following tutorial.
-
 Users, groups and file permissions
 
-There can be several users on a single UNIX computer. File permissions are a system for controlling which files users can access and also controlling the way that they can access the files.  Each file has an owner and the owner can decide what kind of access she grants to other users.
+There can be several users on a single UNIX computer. File permissions are a system for controlling which
+files users can access and also controlling the way that they can access the files. Each file has an owner
+and the owner can decide what kind of access she grants to other users.
 
 The ls command
 
-The ls command can do more than just list the contents of a directory. It can also give you a whole lot of useful information about files and directories.
+The ls command can do more than just list the contents of a directory. It can also give you a whole lot of
+useful information about files and directories.
 
 Reducing the size of a file/directory by compressing it
 
@@ -86,29 +128,30 @@ Read about compressing and decompressing files and directories using the command
 
 Processes
 
-Each time we run a command on the command line, or execute a program, a new process is started in our operating system. The following video talks about the basics of processes, and process management in the command line.
+Each time we run a command on the command line, or execute a program, a new process is started in our
+operating system. The following video talks about the basics of processes, and process management in the
+command line.
 
-Commands introduced in this video:
 top, &, fg, CTRL+Z, ps, kill
 
-Processes Basics:
-
-The following tutorials give some basic idea about what processes are.
+Processes Basics
 
 Remote servers
 
-It is becoming more and more common to work on remote servers which provide us much better computational resources (ie. GPUs) and memory space than our personal computers can hope to match. In this video, we will see the basics of how we can connect and work on such a remote server, as well as how we can transfer files to and from such a server.
+It is becoming more and more common to work on remote servers which provide us much better computational
+resources (ie. GPUs) and memory space than our personal computers can hope to match. In this video, we will
+see the basics of how we can connect and work on such a remote server, as well as how we can transfer files
+to and from such a server.
 
-Commands introduced in this video:
 ssh, scp
 
 We use the ssh command for connecting to remote servers, and scp for copying files to/from servers.
 
 If you have questions about how to set up the .ssh/config file, you can find more information here
 
-Some useful scp tips: (eg. How to send/receive multiple files at once, How to send/receive all files of a certain type, etc)
+Some useful scp tips: (eg. How to send/receive multiple files at once, How to send/receive all files of a
+certain type, etc)
 
-At the end of this week, please make sure:
 * You are able to copy, move and delete a directory.
 * You have visited the root directory of your system. 
 * You know how to compress a file and a directory using gzip and tar.
