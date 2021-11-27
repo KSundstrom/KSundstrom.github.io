@@ -44,20 +44,6 @@ Among the basic shell commands we learnt this first week were:
 `mkdir`     | Creates a new directory
 `cd`        | Changes the current directory
 
-For example, if we, in Bash as the user ‘user’, would want to create a new directory named ‘foo’, move into it,
-confirm where we are in the directory tree (i.e. print our current working directory), then move back up in the
-directory tree, and finally confirm who we are (i.e. print the current user), our terminal would look like this:
-
-```bash
-~$ mkdir foo
-~$ cd foo
-~/foo$ pwd
-/home/user/foo
-~/foo$ cd ..
-~$ whoami
-user
-```
-
 We also learnt how to fetch contents from the internet using `wget`, and how to open and edit text files with the
 text editor `emacs`.
 
@@ -72,6 +58,22 @@ We also learnt various keys and key combinations for quitting applications, for 
 * Multiple key combinations:
   * Ctrl-x Ctrl-c
 
+### Example
+
+For example, if we, in Bash as the user ‘user’, would want to create a new directory named ‘foo’, move into it,
+confirm where we are in the directory tree (i.e. print our current working directory), then move back up in the
+directory tree, and finally confirm who we are (i.e. print the current user), our terminal would look like this:
+
+```bash
+~$ mkdir foo
+~$ cd foo
+~/foo$ pwd
+/home/user/foo
+~/foo$ cd ..
+~$ whoami
+user
+```
+
 ## Week 2: Navigating a UNIX System
 
 This week we watched an interview with Tatu Ylönen, the creator of `ssh` and PhD candidate at Uni Helsinki, and
@@ -85,7 +87,7 @@ command line.
 Finally, we learnt how to work with remote servers using `ssh` and and the related `scp`, working
 with the CSC server Puhti.
 
-Among the basic shell commands we learnt this first week were:
+Among the shell commands we learnt this week were:
 
 **Command** | **Usage**
 :---        | :---
@@ -104,21 +106,79 @@ Among the basic shell commands we learnt this first week were:
 
 We also learnt the key combination Ctrl-z to stop the currently running process.
 
-For example, if we, in Bash as the user ‘user’, would want to log onto the remote server Puhti
-using SSH, we would give the command:
-
-```bash
-~$ ssh user@puhti.csc.fi
-```
-
 Understanding and using SSH and SCP was something I had wanted to learn for a long time, so I very
 much appreciated in particular these aspects of this week. I have since learnt a bit more and I am
 now comfortable using RSA, ECDSA, and Ed25519 keys and SSH config and authorization files for
 logging onto and working with a variety of different remote servers in a variety of different ways.
 
+### Example
+
+For example, if we, in Bash, would want to log onto the remote server Puhti as the user ‘user’ using
+SSH, we would give the command:
+
+```bash
+~$ ssh user@puhti.csc.fi
+```
+
 ## Week 3: Basic Corpus Processing
 
-Lorem ipsum
+This week we learnt about various fundamental tools for text processing in Unixlike environments. First, we
+learnt about different character encodings, in particular about ASCII, Latin-1, and UTF-8, and how to convert
+between these. We also learnt about the different line endings in Windows and UNIX text files, and how to
+convert between these.
+
+Furthermore, we learnt various useful commands for processing and searching text, about standard streams and
+their redirection, and the basics of regular expressions. Finally, we also learnt about structured text, such
+as tables in the form of CSV or TSV, and commands for processing such structured text.
+
+Among the shell commands we learnt this week were:
+
+**Command**   | **Usage**
+:---          | :---
+`file`        | Returns information about a file, e.g. encoding and line endings
+`dos2unix`    | Converts CRLF line endings to LF line endings
+`unix2dos`    | Converts LF line endings to CRLF line endings
+`iconv`       | Converts text from one character encoding to another
+`tr`          | Translates, squeezes, or deletes characters
+`sort`        | Sorts lines in alphabetical or numerical order
+`uniq`        | Reports or omits repeated lines
+`head`        | Returns the beginning of a file
+`tail`        | Returns the end of a file
+`wc`          | Returns the number of lines, words, or bytes in file
+`cut`         | Remove sections from each line
+`grep`        | Returns lines matching the given regular expression pattern
+`egrep`       | `grep` with extended regular expressions
+
+I have always been interested in writing systems and their digital representation, and thus the themes of this week
+were particularly interesting to me. They were also particularly useful to me as an aspiring linguist and language
+technologist. I knew the fundamentals of regular expressions from before, but I appreciated the opportunity to
+repeat them, as well as learning how to use them through `grep` and `egrep` in a command-line environment. I also
+appreciated learning about handling CSV and TSV files through the command line.
+
+### Example
+
+For example, if we had the text file `text.txt` with CRLF line endings and Latin-1 encoding, and, in Bash,
+would want to convert the line endings to LF, convert the encoding to UTF-8, and then tokenize the text, our
+terminal would look like this:
+
+```bash
+~$ dos2unix text.txt
+dos2unix: converting file text.txt to Unix format...
+~$ iconv -f latin1 -t utf-8 text.txt > text.utf8.txt
+~$ cat text.utf8.txt | tr -s "[:space:][:punct:]" "\n" > text.utf8.tok.txt
+```
+
+The option `-f latin1` in `iconv -f latin1 -t utf-8 text.txt > text.utf8.txt` indicates the encoding _from_ which
+we want to convert, i.e. Latin-1, and `-t utf-8` the encoding _to_ which we want to convert, i.e. UTF-8. The `>`
+redirects the output, and thus `> text.utf8.txt` redirects the result of the conversion into the file
+`text.utf8.txt`.
+
+`cat text.utf8.txt` returns the text content of the text file, and the `|` ‘pipes’ the output to the following
+command, i.e. to the translation command `tr -s "[:space:][:punct:]" "\n"`, in which `"[:space:][:punct:]"`
+indicates what we want to replace, i.e. the so-called Posix classes of all whitespace and punctuation characters,
+and `"\n"` indicates what we want to translate these characters into, i.e. into newlines. The option `-s` squeezes
+repeats, i.e. drops repeated replacements, so that we always get just one newline, not multiple newlines. Finally,
+the output of the translation command is redirected into the file `text.utf8.tok.txt`.
 
 ## Week 4: Advanced Corpus Processing
 
