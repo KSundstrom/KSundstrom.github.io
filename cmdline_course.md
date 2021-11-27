@@ -34,22 +34,22 @@ Among the basic shell commands we learnt this first week were:
 **Command** | **Usage**
 :---        | :---
 `ls`        | Lists the contents of the currect directory
-`pwd`       | Prints the currect working directory
-`whoami`    | Prints the current user
+`pwd`       | Returns the currect working directory
+`whoami`    | Returns the current user
 `mv`        | Moves (or renames) a file
 `cat`       | Concatenates files
-`less`      | Displays file contents
+`less`      | Displays file contents with scrolling ability
 `cp`        | Copies a file
 `rm`        | Removes a file
 `mkdir`     | Creates a new directory
 `cd`        | Changes the current directory
 
-For example, if we, in Bash, would want to create a new directory named ‘foo’, move into it, confirm where we are
-in the directory tree (i.e. print our current working directory), then move back up in the directory tree, and
-finally confirm who we are (i.e. print the current user), our terminal would look like this:
+For example, if we, in Bash as the user ‘user’, would want to create a new directory named ‘foo’, move into it,
+confirm where we are in the directory tree (i.e. print our current working directory), then move back up in the
+directory tree, and finally confirm who we are (i.e. print the current user), our terminal would look like this:
 
 ```bash
-~$ mkdir foo
+~$ mkdir foo
 ~$ cd foo
 ~/foo$ pwd
 /home/user/foo
@@ -76,59 +76,45 @@ We also learnt various keys and key combinations for quitting applications, for 
 
 This week we watched an interview with Tatu Ylönen, the creator of `ssh` and PhD candidate at Uni Helsinki, and
 learnt more about Unixlike systems. In particular, we learnt how to copy, move and remove directories, about
-the standard system directories in a Unixlike system, and about permissions and privacy in Unixlike systems.
+the standard system directories in a Unixlike system, about permissions and privacy in Unixlike systems, and how
+to archive, extract, compress, and decompress files and directories using `tar` and `gzip`.
+
 Furthermore, we learnt about processes and the management of processes, and how to control processes from the
-command line. Finally, we learnt how to work with remote servers using `ssh` and and the related `scp`, working
-with the CSC server Puhti.
-
-cp -R
-rm -R
-rmdir
-which
-ls
-
-This is going to be some repetition from last week and some new contents on how to copy, move and delete files
-and directories. This tutorial uses the option "-F" for the ls command. It makes ls indicate whether the items
-are regular files or directories by appending a slash at end of he directory name. You can try it out if you like.
-
-Users, groups and file permissions
-
-There can be several users on a single UNIX computer. File permissions are a system for controlling which
-files users can access and also controlling the way that they can access the files. Each file has an owner
-and the owner can decide what kind of access she grants to other users.
-
-Reducing the size of a file/directory by compressing it
-
-Read about compressing and decompressing files and directories using the command gzip and tar.
-
-Each time we run a command on the command line, or execute a program, a new process is started in our
-operating system. The following video talks about the basics of processes, and process management in the
 command line.
 
-top, &, fg, CTRL+Z, ps, kill
+Finally, we learnt how to work with remote servers using `ssh` and and the related `scp`, working
+with the CSC server Puhti.
 
-It is becoming more and more common to work on remote servers which provide us much better computational
-resources (ie. GPUs) and memory space than our personal computers can hope to match. In this video, we will
-see the basics of how we can connect and work on such a remote server, as well as how we can transfer files
-to and from such a server.
+Among the basic shell commands we learnt this first week were:
 
-ssh, scp
+**Command** | **Usage**
+:---        | :---
+`cp -R`     | Copies recursively
+`rm -R`     | Removes recursively
+`rmdir`     | Removes an empty directory
+`which`     | Returns the pathname of the file a command would execute
+`ls -F`     | `ls` with indication of item type
+`top`       | Provides a real-time view of the system and its processes
+`&`         | Starts a process in the background
+`fg`        | Brings a process to the foreground
+`ps`        | Lists the current processes
+`kill`      | Sends a signal to a process, typically to end it
+`ssh`       | Connects securely to a remote server via SSH
+`scp`       | Copies securely to a remote server via SSH
 
-We use the ssh command for connecting to remote servers, and scp for copying files to/from servers.
+We also learnt the key combination Ctrl-z to stop the currently running process.
 
-If you have questions about how to set up the .ssh/config file, you can find more information here
+For example, if we, in Bash as the user ‘user’, would want to log onto the remote server Puhti
+using SSH, we would give the command:
 
-Some useful scp tips: (eg. How to send/receive multiple files at once, How to send/receive all files of a
-certain type, etc)
+```bash
+~$ ssh user@puhti.csc.fi
+```
 
-* You are able to copy, move and delete a directory.
-* You have visited the root directory of your system. 
-* You know how to compress a file and a directory using gzip and tar.
-* You know how to find out and change the read and write permissions for a file.
-* You can find the PID of a process and kill it.
-* You're able to run commands in the background.
-* You know how to form a remote connection to a server.
-* You can to copy files to and from a server using scp.
+Understanding and using SSH and SCP was something I had wanted to learn for a long time, so I very
+much appreciated in particular these aspects of this week. I have since learnt a bit more and I am
+now comfortable using RSA, ECDSA, and Ed25519 keys and SSH config and authorization files for
+logging onto and working with a variety of different remote servers in a variety of different ways.
 
 ## Week 3: Basic Corpus Processing
 
