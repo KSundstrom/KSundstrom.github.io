@@ -404,26 +404,14 @@ learn more about Ruby and Ruby Gems, and to work with new Overleaf LaTeX templat
 
 ### Example
 
-An extremly simple `default.html` HTML5 file for use with Jekyll could look like this:
+If we wanted to create a table with Markdown, we could use code like this:
 
-```html
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-	</head>
-	<body>
-		<header>
-			<h1>{{site.title}}</h1>
-		</header>
-		<section>
-		{{ content }}
-		</section>
-	</body>
-</html>
+```markdown
+Left-aligned | Centered | Right-aligned
+:---         | :---:    | ---:
+Foo          | Foo      | Foo
+Bar          | Bar      | Bar
 ```
 
-The `{{site.title}}` variable refers to the title which is defined in a YAML file `_config.yml` read by Jekyll.
-Similarly, `{{ content }}` is populated by Jekyll based on Markdown files.
+The colon in `:---` marks alignment, and at least three hyphens are needed to mark a horizontal rule. Vertical
+rules are marked by `|`.
