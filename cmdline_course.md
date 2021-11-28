@@ -395,10 +395,35 @@ our commit to the remote branch (this assumes we are set up to track the correct
 
 ## Final Assignment: Building Webpages using GitHub Pages
 
-Jekyll and GitHub Pages
+For the final assignment, we learnt about how to build webpages using GitHub Pages, and thus learnt about
+Markdown, about the Ruby Gems Bundler and Jekyll, and also how to create a LaTeX-based CV using Overleaf.
+
+The final assignment also involved reviewing what we had learnt during the course, and much exercise with using
+Git and GitHub. I particularly appreciated the opportunities to learn how to create pull requests on GitHub, to
+learn more about Ruby and Ruby Gems, and to work with new Overleaf LaTeX templates.
 
 ### Example
 
-```bash
-~$ 
+An extremly simple `default.html` HTML5 file for use with Jekyll could look like this:
+
+```html
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	<body>
+		<header>
+			<h1>{{site.title}}</h1>
+		</header>
+		<section>
+		{{ content }}
+		</section>
+	</body>
+</html>
 ```
+
+The `{{site.title}}` variable refers to the title which is defined in a YAML file `_config.yml` read by Jekyll.
+Similarly, `{{ content }}` is populated by Jekyll based on Markdown files.
