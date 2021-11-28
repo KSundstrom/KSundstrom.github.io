@@ -173,7 +173,7 @@ we want to convert, i.e. Latin-1, and `-t utf-8` the encoding _to_ which we want
 redirects the output, and thus `> text.utf8.txt` redirects the result of the conversion into the file
 `text.utf8.txt`.
 
-`cat text.utf8.txt` returns the text content of the text file, and the `|` ‘pipes’ the output to the following
+`cat text.utf8.txt` returns the text content of the text file, and the `|` pipes the output to the following
 command, i.e. to the translation command `tr -s "[:space:][:punct:]" "\n"`, in which `"[:space:][:punct:]"`
 indicates what we want to replace, i.e. the so-called Posix classes of all whitespace and punctuation characters,
 and `"\n"` indicates what we want to translate these characters into, i.e. into newlines. The option `-s` squeezes
@@ -182,20 +182,111 @@ the output of the translation command is redirected into the file `text.utf8.tok
 
 ## Week 4: Advanced Corpus Processing
 
-Lorem ipsum
+This week we learnt about more advanced tools for text processing in Unixlike environments. First, we learnt about
+the tool `sed`, or _stream editor_, a powerful command-line tool for quickly editing text files without opening
+them in an editor. It can be used for finding strings, replacing strings, insertion, deletion, and other similar
+tasks. It is commonly used with regular expressions, and thus we also repeated and learnt more about regular
+expressions.
+
+Finally, we also learnt more about combining simple commands into more complex pipelines in Unixlike environments.
+In particular, we learnt how to create more advanced pipelines for processing text. Using pipelines, we don't
+generate many unnecessary intermediate files.
+
+Among the commands we learnt this week were:
+
+**Command**  | **Usage**
+:---         | :---
+`sed`        | _stream editor_
+`sed -n`     | `sed` without default printing
+`sed -E`     | `sed` with extended regular expressions
+`sed '//d'`  | `sed` delete
+`sed '//p'`  | `sed` print
+`sed 's//'`  | `sed` substitution
+`sed 's//g'` | `sed` global substitution
+
+The command `sed -n '/pattern/p'` would duplicate the function of `grep`, using the regular-expression pattern
+`pattern`.
+
+### Example
+
+For example, if we had the text file `text.txt` (with LF line endings)which we wanted to transform into
+one-sentence-per-line format, we could, in Bash, use the following command pipeline:
+
+```bash
+~$ cat text.txt | sed 's/^$/#/' | tr '\n' ' ' | sed -E 's/(.?!) ([[:upper:]])/\1# \2/g' | tr '#' '\n' | sed 's/^ *//' | sed 's/ *$//' | grep -v "^$" > text.sent.txt
+```
+
+`cat text.utf8.txt` returns the text content of the text file, and the `|` pipes the output to the following
+command. The _stream-editor_ command `sed 's/^$/#/'` replaces empty lines (matched by the regular expression
+`^$`) with a placeholder character `#`. The following command `tr '\n' ' '` replaces newlines with a space.
+The following command `sed -E 's/(.?!) ([[:upper:]])/\1# \2/g'` uses extended regular expressions to find final
+punctuation, followed by a space, followed by an uppercase character, and uses capture groups to insert a
+placeholder `#` at the apparent end of the sentence. The following command `tr '#' '\n'` replaces the
+placeholders `#` with newlines. The following command `sed 's/^ *//'` removes whitespace at the beginning of
+a line and the following command `sed 's/ *$//'` at the end of a line. The final command `grep -v "^$"`
+inversely finds empty lines, and thus returns all non-empty lines, while the final `> text.sent.txt` redirects
+the output to the file `text.sent.txt`.
 
 ## Week 5: Scripting and Configuration Files
 
 Lorem ipsum
 
+Among the shell commands we learnt this week were:
+
+**Command** | **Usage**
+:---        | :---
+``          | 
+
+### Example
+
+```bash
+~$ 
+```
+
 ## Week 6: Installing and Running Programs
 
 Lorem ipsum
+
+Among the shell commands we learnt this week were:
+
+**Command** | **Usage**
+:---        | :---
+``          | 
+
+### Example
+
+```bash
+~$ 
+```
 
 ## Week 7: Version Control
 
 Lorem ipsum
 
+Among the shell commands we learnt this week were:
+
+**Command** | **Usage**
+:---        | :---
+``          | 
+
+### Example
+
+```bash
+~$ 
+```
+
 ## Final Assignment: Building Webpages using GitHub Pages
 
 Jekyll and GitHub Pages
+
+Among the shell commands we learnt this week were:
+
+**Command** | **Usage**
+:---        | :---
+``          | 
+
+### Example
+
+```bash
+~$ 
+```
