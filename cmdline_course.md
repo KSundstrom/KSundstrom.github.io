@@ -65,12 +65,12 @@ confirm where we are in the directory tree (i.e. print our current working direc
 directory tree, and finally confirm who we are (i.e. print the current user), our terminal would look like this:
 
 ```bash
-~$ mkdir foo
-~$ cd foo
-~/foo$ pwd
+$ mkdir foo
+$ cd foo
+$ pwd
 /home/user/foo
-~/foo$ cd ..
-~$ whoami
+$ cd ..
+$ whoami
 user
 ```
 
@@ -117,7 +117,7 @@ For example, if we, in Bash, would want to log onto the remote server Puhti as t
 SSH, we would give the command:
 
 ```bash
-~$ ssh user@puhti.csc.fi
+$ ssh user@puhti.csc.fi
 ```
 
 ## Week 3: Basic Corpus Processing
@@ -162,10 +162,10 @@ would want to convert the line endings to LF, convert the encoding to UTF-8, and
 terminal would look like this:
 
 ```bash
-~$ dos2unix text.txt
+$ dos2unix text.txt
 dos2unix: converting file text.txt to Unix format...
-~$ iconv -f latin1 -t utf-8 text.txt > text.utf8.txt
-~$ cat text.utf8.txt | tr -s "[:space:][:punct:]" "\n" > text.utf8.tok.txt
+$ iconv -f latin1 -t utf-8 text.txt > text.utf8.txt
+$ cat text.utf8.txt | tr -s "[:space:][:punct:]" "\n" > text.utf8.tok.txt
 ```
 
 The option `-f latin1` in `iconv -f latin1 -t utf-8 text.txt > text.utf8.txt` indicates the encoding _from_ which
@@ -213,7 +213,7 @@ For example, if we had the text file `text.txt` (with LF line endings)which we w
 one-sentence-per-line format, we could, in Bash, use the following command pipeline:
 
 ```bash
-~$ cat text.txt | sed 's/^$/#/' | tr '\n' ' ' | sed -E 's/(.?!) ([[:upper:]])/\1# \2/g' | tr '#' '\n' | sed 's/^ *//' | sed 's/ *$//' | grep -v "^$" > text.sent.txt
+$ cat text.txt | sed 's/^$/#/' | tr '\n' ' ' | sed -E 's/(.?!) ([[:upper:]])/\1# \2/g' | tr '#' '\n' | sed 's/^ *//' | sed 's/ *$//' | grep -v "^$" > text.sent.txt
 ```
 
 `cat text.utf8.txt` returns the text content of the text file, and the `|` pipes the output to the following
@@ -349,36 +349,53 @@ clean:
 	rm -f $(RESULTDIR)/*
 ```
 
-To explain some part in detail, the `clean` block is a rule `make` rule for cleaning up what has been built, by
-(forcibly) removing all files in the `results` directory. It first echoes, i.e. prints, the string ‘Cleaning
-up...’ and then calls the ordinary Bash command `rm`. The `clean` rule can be called from the command line with
-`make clean`.
+To explain some part in detail, the `clean` block is a `make` rule for cleaning up what has been built, by
+(forcibly) removing all files in the `results` directory. When called, it first echoes, i.e. prints, the string
+‘Cleaning up...’, and then calls the ordinary Bash command `rm -f`, expanding `$(RESULTDIR)` to `results`. The
+`clean` rule can be called from the command line with `make clean`.
 
 ## Week 7: Version Control
 
-Lorem ipsum
+This week we learnt about version or revision control, specifically with Git, a distributed version control
+system. We also learnt about GitHub, an online service for hosting Git repositories. We set up accounts on GitHub and created new Git repositories on GitHub. Furthermore, we learnt about configuring Git, about initializing
+and cloning Git repositories, about staging, committing and pushing, and about branches and merging. Finally,
+we also learnt about undoing common mistakes with Git.
 
-Among the shell commands we learnt this week were:
+I had personally used GitHub together with the GUI application GitHub Desktop before, but appreciated finally
+learning all the fundamentals about Git proper, and what is happing in the background, even when using a GUI.
+I now feel much more comfortable using Git and GitHub, and much better understand the concepts of cloning,
+pulling, staging, committing, pushing, merging, and pull-requesting.
 
-**Command** | **Usage**
-:---        | :---
-``          | 
+Using Git and GitHub also made me revisit SSH keys, and made me learn more about GPG keys, with which I now sign
+all my Git commits.
 
 ### Example
 
+If we wanted to push our correcting of typos to the remote branch, we would use the following sequence of
+commands in Bash:
+
 ```bash
-~$ 
+$ git add --all
+$ git commit -m "Correcting typos"
+[master 1234567] Correcting typos
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+$ git pull
+Authenticated to github.com...
+Already up to date.
+$ git push
+Authenticated to github.com...
+To github.com:user/repo.git
+   1234568..1234567  master -> master
 ```
+
+`git add --all` stages our changes. `git commit -m "Correcting typos"` creates a commit out of the staged changes
+with an explanatory message. `git pull` is, of course, the opposite of what we are about to to, but it is good
+practice to make sure we are up to date with the remote branch before pushing to it. `git push` finally pushes
+our commit to the remote branch (this assumes we are set up to track the correct remote branch).
 
 ## Final Assignment: Building Webpages using GitHub Pages
 
 Jekyll and GitHub Pages
-
-Among the shell commands we learnt this week were:
-
-**Command** | **Usage**
-:---        | :---
-``          | 
 
 ### Example
 
