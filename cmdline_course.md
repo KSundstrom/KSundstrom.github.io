@@ -149,11 +149,11 @@ Among the shell commands we learnt this week were:
 `grep`        | Returns lines matching the given regular expression pattern
 `egrep`       | `grep` with extended regular expressions
 
-I have always been interested in writing systems and their digital representation, and thus the themes of this week
-were particularly interesting to me. They were also particularly useful to me as an aspiring linguist and language
-technologist. I knew the fundamentals of regular expressions from before, but I appreciated the opportunity to
-repeat them, as well as learning how to use them through `grep` and `egrep` in a command-line environment. I also
-appreciated learning about handling CSV and TSV files through the command line.
+I have always been interested in writing systems and their digital representation, and thus the themes of this
+week were particularly interesting to me. They were also particularly useful to me as an aspiring linguist and
+language technologist. I knew the fundamentals of regular expressions from before, but I appreciated the
+opportunity to repeat them, as well as learning how to use them through `grep` and `egrep` in a command-line
+environment. I also appreciated learning about handling CSV and TSV files through the command line.
 
 ### Example
 
@@ -229,19 +229,61 @@ the output to the file `text.sent.txt`.
 
 ## Week 5: Scripting and Configuration Files
 
-Lorem ipsum
+This week we learnt about Bash scripting as well as about Bash environment variables and configuration files.
+Scripting can be described as storing a command pipeline, possibly complex and branching, as a programme, a file
+which can be executed.
 
-Among the shell commands we learnt this week were:
+Specifically, we learnt the fundamentals of writing Bash scripts, about command-line variables and how to use
+them in scripts, about conditional execution with `if`, and about command substitution. Furthermore, we learnt
+about environment variables in Bash and how to alter the behaviour of the system by changing such variables.
+Finally, we learnt how to use Bash configuration files such as `.bashrc` or `.bash_profile` to effectively make
+changes to the environment permanent, by setting environment variables at login. This can, for example, be used
+to set a helpful custom prompt, or to set useful custom shortcut commands.
+
+Among the shell commands, statements, and variables we learnt this week were:
 
 **Command** | **Usage**
 :---        | :---
-``          | 
+`chmod u+x` | Grants the owner of a file execution rights
+`printenv`  | Returns all or part of the environment variables
+`echo`      | Returns a line of text
+`export`    | Exports a variable to the environment
+`source`    | Reads and executes commands from the specified file
+`alias`     | Creates an alias, i.e. a shortcut command
+`if`        | Begins a conditional statement
+`$?`        | Variable containing the exit status of the last task
+`$#`        | Variable containing the number of arguments given
 
 ### Example
 
+For example, if we wanted to write a simple Bash script for creating a word-frequency list based on a given text
+file, outputting the list to another file, we could write the following script:
+
 ```bash
-~$ 
+#!/bin/bash
+
+if [ $# -ne 2 ]
+then
+	echo "ERROR: Two command line arguments required."
+	echo "$0 input_text_file output_freq_file"
+	exit 1
+fi
+
+cat $1 |
+dos2unix |
+tr -s "[:space:]" "\n" |
+tr -d "[:punct:]" |
+sort |
+uniq -c |
+sort -nr > $2
 ```
+
+The very first line is a so-called shebang or hashbang, identifying what kind of script the script is. The
+subsequent `if` block tests that the user has given exactly two arguments (an input file and an output file), and
+aborts if the user has not. The final block is a pipeline taking the contents of file that was the first argument,
+converting the line endings to LF, replacing all whitespace with newlines, deleting all punctuation, sorting the
+list, counting repeated occurences, sorting the lines (now with number of occurences prepended) in reverse
+numerical order, and outputting to the file that was the second argument.
 
 ## Week 6: Installing and Running Programs
 
