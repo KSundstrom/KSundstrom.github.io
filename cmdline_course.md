@@ -287,19 +287,72 @@ numerical order, and outputting to the file that was the second argument.
 
 ## Week 6: Installing and Running Programs
 
-Lorem ipsum
+This week we learnt about becoming the superuser or root user, about installing and managing software, about
+Python packages and virtual environments, and about Makefiles.
 
-Among the shell commands we learnt this week were:
+We learnt it is not recommended to be logged in as the superuser more than absolutely necessary, which is why it
+is wise to use `sudo` for running commands requiring superuser privileges.
 
-**Command** | **Usage**
-:---        | :---
-``          | 
+Furthermore, we learnt that software generally has complicated dependencies, which is why software tends to be
+managed with dedicated package managers, such as APT, which can be called with `apt` or `apt-get`. We also learnt
+some fundamentals about the programming language Python, and learnt how to use Python’s package manager Pip to
+manage Python packages, specifically. In connection with this, we also learnt about so-called virtual Python
+environment, in which package dependencies are handled separately from the rest of the system. I have since tried
+actively using both `venv` and `pipenv` virtual environments in other projects, generally preferring `venv`.
+
+Finally, we learnt about Makefiles, a useful tool for building various projects in a command-line environment,
+through automation of pipelines. The command used to build according to the Makefile is `make`.
+
+Among the commands we learnt this week were:
+
+**Command**   | **Usage**
+:---          | :---
+`sudo`        | Executes a command as the superuser (or another user)
+`su`          | Runs an interactive shell as root (when no user specified)
+`passwd`      | Changes user password
+`apt-get`     | Calls the APT package manager
+`locate`      | List files in databases matching a pattern
+`python`      | Calls the Python interpreter
+`pip`         | Calls Python’s package manager Pip
+`pip install` | Has Pip install a Python package
 
 ### Example
 
-```bash
-~$ 
+This is an example of a Makefile which could be used in a project, where we wanted to run the shell scripts
+`freqlist.sh` and `sent_per_line.sh` (located in the directory `bin`) on a possibly large number of text files
+(located in the directory `data`; in this example there are only the two files `foo.txt` and `bar.txt`),
+outputting to similarly named files in the directory `results`:
+
+```makefile
+# Makefile
+
+TEXTS = foo bar
+RESULTDIR = results
+DATADIR = data
+BINDIR = bin
+
+FREQLISTS = $(TEXTS:%=$(RESULTDIR)/%.freq.txt)
+SENTEDTEXTS = $(TEXTS:%=$(RESULTDIR)/%.sent.txt)
+
+.PHONY: all clean
+
+all: $(FREQLISTS) $(SENTEDTEXTS)
+
+$(RESULTDIR)/%.freq.txt: $(DATADIR)/%.txt
+	$(BINDIR)/freqlist.sh $< $@
+
+$(RESULTDIR)/%.sent.txt: $(DATADIR)/%.txt
+	$(BINDIR)/sent_per_line.sh $< $@
+
+clean:
+	@echo "Cleaning up..."
+	rm -f $(RESULTDIR)/*
 ```
+
+To explain some part in detail, the `clean` block is a rule `make` rule for cleaning up what has been built, by
+(forcibly) removing all files in the `results` directory. It first echoes, i.e. prints, the string ‘Cleaning
+up...’ and then calls the ordinary Bash command `rm`. The `clean` rule can be called from the command line with
+`make clean`.
 
 ## Week 7: Version Control
 
