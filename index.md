@@ -43,7 +43,7 @@ Please have a look at [my CV over on Overleaf](https://www.overleaf.com/read/kpy
 * [KIK-LG102 _Morphology and Syntax_ (10cr)](https://studies.helsinki.fi/courses/cu/hy-CU-117877884-2020-08-01), spring 2021
 * [KIK-LG103 _Semantics and Pragmatics_ (10cr)](https://studies.helsinki.fi/courses/cu/hy-CU-117877915-2020-08-01), spring 2021
 * [KIK-LG201 _Advanced Course in Phonology_ (5 cr)](https://studies.helsinki.fi/courses/cu/hy-CU-117878060-2021-08-01), autumn 2021
-* [KIK-LG204 _Introduction to the Languages of the World and Language Typology_ (5cr)](https://studies.helsinki.fi/courses/cu/hy-CU-117878478-2021-08-01), autumn 2021
+* [KIK-LG204 _Languages of the World and Language Typology_ (5cr)](https://studies.helsinki.fi/courses/cu/hy-CU-117878478-2021-08-01), autumn 2021
 * [KIK-LG216 _Teaching Assistant_ (5cr)](https://studies.helsinki.fi/courses/cu/hy-CU-117879329-2021-08-01), autumn 2021
 * [KIK-402 _Language in Society and Culture_ (5cr)](https://studies.helsinki.fi/courses/cu/hy-CU-118591802-2020-08-01), spring 2021
 * [KIK-403 _Discourse Studies and Rhetoric_ (5cr)](https://studies.helsinki.fi/courses/cu/hy-CU-118591831-2020-08-01), spring 2021
@@ -52,6 +52,8 @@ Please have a look at [my CV over on Overleaf](https://www.overleaf.com/read/kpy
 * [KIK-407 _Phonetics in Language Learning and Teaching_ (5cr)](https://studies.helsinki.fi/courses/cu/hy-CU-118591958-2020-08-01), spring 2021
 * [KIK-408 _Sounds of the World's Languages_ (5cr)](https://studies.helsinki.fi/courses/cu/hy-CU-118591985-2020-08-01), spring 2021
 * [KIK-417 _Introduction to Digital Humanities_ (5cr)](https://studies.helsinki.fi/courses/cu/hy-CU-134491907-2020-08-01), spring 2021
+* [KOK-N101 _Writing skills_ (5cr)](https://studies.helsinki.fi/courses/cu/hy-CU-118309918-2020-08-01), autumn 2021
+* [KOK-N102 _Rhetoric_ (5cr)](https://studies.helsinki.fi/courses/cu/hy-CU-118310760-2020-08-01), autumn 2021
 * [KOK-401N _Introduktion till litteraturvetenskap_ (5cr)](https://studies.helsinki.fi/courses/cu/hy-CU-123935065-2020-08-01), autumn 2020
 * [KOK-402N _Introduktion till språkvetenskap_ (5cr)](https://studies.helsinki.fi/courses/cu/hy-CU-123935267-2020-08-01), autumn 2020
 * [KOK-403N _Akademiskt skrivande_ (3cr)](https://studies.helsinki.fi/courses/cu/hy-CU-123935427-2020-08-01), autumn 2020
@@ -68,8 +70,6 @@ Please have a look at [my CV over on Overleaf](https://www.overleaf.com/read/kpy
 * [KIK-LG212 _Introduction to Speech Analysis_ (5cr)](https://studies.helsinki.fi/courses/cu/hy-CU-117879162-2021-08-01)
 * [KIK-LG221 _Command Line Tools for Linguists_ (5cr)](https://studies.helsinki.fi/courses/cu/hy-CU-134651633-2021-08-01)
 * [KIK-415 _Portfolio Work_ (2cr)](https://studies.helsinki.fi/courses/cu/hy-CU-118592193-2020-08-01)
-* [KOK-N101 _Writing skills_ (5cr)](https://studies.helsinki.fi/courses/cu/hy-CU-118309918-2020-08-01)
-* [KOK-N102 _Rhetoric_ (5cr)](https://studies.helsinki.fi/courses/cu/hy-CU-118310760-2020-08-01)
 * [KOK-N103 _Grammar I_ (5cr)](https://studies.helsinki.fi/courses/cu/hy-CU-118310861-2020-08-01)
 * [NOR-S371 _Iceland and Icelandic_ (5cr)](https://studies.helsinki.fi/courses/cu/hy-CU-117947352-2020-08-01)
 * [TKT21018 _Elements of AI: Introduction to AI_ (2cr)](https://studies.helsinki.fi/courses/cu/hy-CU-124047974-2020-08-01)
