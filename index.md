@@ -9,7 +9,7 @@ layout: default
 My name is **Kasper Sundström** and this is my homepage for the purposes of university courses.
 
 I am an undergraduate student at the **University of Helsinki**, majoring in general linguistics, phonetics and
-language technology, and minoring in Nordic languages, with Swedish as first language.
+language technology, and minoring in Nordic languages, Swedish as first language.
 
 I have my own private business, **K. Sundström**, which offers various language-related services, such as translation,
 copywriting, copyediting, proofreading, layout, prepress, web design, as well as consulting and training.
@@ -44,7 +44,10 @@ Please have a look at [my CV over on Overleaf](https://www.overleaf.com/read/kpy
 * [KIK-LG103 _Semantics and Pragmatics_ (10cr)](https://studies.helsinki.fi/courses/cu/hy-CU-117877915-2020-08-01), spring 2021
 * [KIK-LG201 _Advanced Course in Phonology_ (5 cr)](https://studies.helsinki.fi/courses/cu/hy-CU-117878060-2021-08-01), autumn 2021
 * [KIK-LG204 _Languages of the World and Language Typology_ (5cr)](https://studies.helsinki.fi/courses/cu/hy-CU-117878478-2021-08-01), autumn 2021
+* [KIK-LG208 _Programming for Linguists_ (5cr)](https://studies.helsinki.fi/courses/cu/hy-CU-117878680-2021-08-01), autumn 2021
+* [KIK-LG212 _Introduction to Speech Analysis_ (5cr)](https://studies.helsinki.fi/courses/cu/hy-CU-117879162-2021-08-01), autumn 2021
 * [KIK-LG216 _Teaching Assistant_ (5cr)](https://studies.helsinki.fi/courses/cu/hy-CU-117879329-2021-08-01), autumn 2021
+* [KIK-LG221 _Command Line Tools for Linguists_ (5cr)](https://studies.helsinki.fi/courses/cu/hy-CU-134651633-2021-08-01), autumn 2021
 * [KIK-402 _Language in Society and Culture_ (5cr)](https://studies.helsinki.fi/courses/cu/hy-CU-118591802-2020-08-01), spring 2021
 * [KIK-403 _Discourse Studies and Rhetoric_ (5cr)](https://studies.helsinki.fi/courses/cu/hy-CU-118591831-2020-08-01), spring 2021
 * [KIK-404 _Corpus Linguistics and Statistical Methods_ (5cr)](https://studies.helsinki.fi/courses/cu/hy-CU-118591838-2020-08-01), spring 2021
@@ -54,6 +57,7 @@ Please have a look at [my CV over on Overleaf](https://www.overleaf.com/read/kpy
 * [KIK-417 _Introduction to Digital Humanities_ (5cr)](https://studies.helsinki.fi/courses/cu/hy-CU-134491907-2020-08-01), spring 2021
 * [KOK-N101 _Writing skills_ (5cr)](https://studies.helsinki.fi/courses/cu/hy-CU-118309918-2020-08-01), autumn 2021
 * [KOK-N102 _Rhetoric_ (5cr)](https://studies.helsinki.fi/courses/cu/hy-CU-118310760-2020-08-01), autumn 2021
+* [KOK-N103 _Grammar I_ (5cr)](https://studies.helsinki.fi/courses/cu/hy-CU-118310861-2020-08-01), autumn 2021
 * [KOK-401N _Introduktion till litteraturvetenskap_ (5cr)](https://studies.helsinki.fi/courses/cu/hy-CU-123935065-2020-08-01), autumn 2020
 * [KOK-402N _Introduktion till språkvetenskap_ (5cr)](https://studies.helsinki.fi/courses/cu/hy-CU-123935267-2020-08-01), autumn 2020
 * [KOK-403N _Akademiskt skrivande_ (3cr)](https://studies.helsinki.fi/courses/cu/hy-CU-123935427-2020-08-01), autumn 2020
@@ -66,11 +70,7 @@ Please have a look at [my CV over on Overleaf](https://www.overleaf.com/read/kpy
 
 * [KIK-LG202 _Advanced Course in Morphology and Syntax_ (5cr)](https://studies.helsinki.fi/courses/cu/hy-CU-117878307-2021-08-01)
 * [KIK-LG205 _Language Documentation, Description and Fieldwork Methods_ (5cr)](https://studies.helsinki.fi/courses/cu/hy-CU-117878531-2021-08-01)
-* [KIK-LG208 _Programming for Linguists_ (5cr)](https://studies.helsinki.fi/courses/cu/hy-CU-117878680-2021-08-01)
-* [KIK-LG212 _Introduction to Speech Analysis_ (5cr)](https://studies.helsinki.fi/courses/cu/hy-CU-117879162-2021-08-01)
-* [KIK-LG221 _Command Line Tools for Linguists_ (5cr)](https://studies.helsinki.fi/courses/cu/hy-CU-134651633-2021-08-01)
 * [KIK-415 _Portfolio Work_ (2cr)](https://studies.helsinki.fi/courses/cu/hy-CU-118592193-2020-08-01)
-* [KOK-N103 _Grammar I_ (5cr)](https://studies.helsinki.fi/courses/cu/hy-CU-118310861-2020-08-01)
 * [NOR-S371 _Iceland and Icelandic_ (5cr)](https://studies.helsinki.fi/courses/cu/hy-CU-117947352-2020-08-01)
 * [TKT21018 _Elements of AI: Introduction to AI_ (2cr)](https://studies.helsinki.fi/courses/cu/hy-CU-124047974-2020-08-01)
 
